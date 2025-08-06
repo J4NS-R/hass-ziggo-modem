@@ -1,0 +1,27 @@
+# Loads default set of integrations. Do not remove.
+default_config: {}
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+homeassistant:
+  auth_providers:
+    - type: trusted_networks
+      trusted_networks:
+        - 0.0.0.0/0
+      allow_bypass_login: true
+    - type: homeassistant
+
+logger:
+  default: warn
+  logs:
+    homeassistant.helpers.entity: debug
+    custom_components: debug
+    homeassistant.components.sensor: debug
+    custom_components.ziggo_modem.sensor: debug
+
+sensor:
+  - platform: ziggo_modem
+    default_gateway: host.docker.internal:8080
+    router_password: example-password

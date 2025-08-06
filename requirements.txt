@@ -1,0 +1,4 @@
+# For development only.
+# Home Assistant Core automatically contains: https://github.com/home-assistant/core/blob/dev/requirements.txt
+requests~=2.32.4
+homeassistant~=2025.7.4

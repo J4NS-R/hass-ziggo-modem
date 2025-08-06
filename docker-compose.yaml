@@ -1,0 +1,16 @@
+services:
+  ha:
+    container_name: hass-dev
+    image: homeassistant/home-assistant:stable
+    restart: unless-stopped
+    volumes:
+      - hadata:/config
+      - ./custom_components:/config/custom_components
+      - ./development/configuration.yaml:/config/configuration.yaml
+    ports:
+      - "8123:8123"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+volumes:
+  hadata: {}
