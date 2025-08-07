@@ -13,3 +13,4 @@ jobs:
         with:
           category: 'integration'
           ignore: 'brands'
+      - uses: home-assistant/actions/hassfest@master
