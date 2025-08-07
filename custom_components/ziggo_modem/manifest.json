@@ -1,12 +1,12 @@
 {
-  "name": "Ziggo SmartWiFi Modem",
   "domain": "ziggo_modem",
-  "version": "0.0.1",
+  "name": "Ziggo SmartWiFi Modem",
   "codeowners": ["@J4NS-R"],
   "dependencies": [],
   "documentation": "https://github.com/J4NS-R/hass-ziggo-modem",
-  "issue_tracker": "https://github.com/J4NS-R/hass-ziggo-modem/issues",
   "integration_type": "service",
   "iot_class": "local_polling",
-  "requirements": []
+  "issue_tracker": "https://github.com/J4NS-R/hass-ziggo-modem/issues",
+  "requirements": [],
+  "version": "0.0.1"
 }

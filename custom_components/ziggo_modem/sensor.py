@@ -2,20 +2,15 @@ from homeassistant.components.sensor import SensorEntity, SensorStateClass
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.typing import ConfigType
 import logging
-import json
 
+from . import DOMAIN
 from .modem_api import ModemApi
 
 LOGGER = logging.getLogger(__name__)
 
 def setup_platform(hass: HomeAssistant, config: ConfigType, add_entities, discovery_info = None):
-    LOGGER.debug('config: %s', json.dumps(config))
-    default_gateway = config.get('default_gateway')
-    router_password = config.get('router_password')
-    if not default_gateway or not router_password:
-        raise Exception("Missing default_gateway or router_password properties!")
-
-    modem_api = ModemApi(default_gateway, router_password)
+    domain_data = hass.data[DOMAIN]
+    modem_api = domain_data['modem_api']
 
     add_entities([ConnectedDevicesSensor(modem_api)])
 
