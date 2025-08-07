@@ -4,7 +4,7 @@ Provides a sensor with the current number of devices connected to your router.
 
 ## Installation
 
-(HACS integration WIP)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=J4NS-R&repository=hass-ziggo-modem&category=integration)
 
 ```yaml
 # configuration.yaml
