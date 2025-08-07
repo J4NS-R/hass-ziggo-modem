@@ -23,5 +23,5 @@ logger:
 
 sensor:
   - platform: ziggo_modem
-    default_gateway: host.docker.internal:8080
-    router_password: example-password
+    default_gateway: !secret default_gateway
+    router_password: !secret router_password

@@ -1,8 +1,10 @@
 # Home Assistant Ziggo SmartWiFi Modem Integration
 
-(Work in Progress)
+Provides a sensor with the current number of devices connected to your router.
 
 ## Installation
+
+(HACS integration WIP)
 
 ```yaml
 # configuration.yaml
@@ -12,3 +14,8 @@ sensor:
     default_gateway: 192.168.178.1
     router_password: examplePassword
 ```
+
+## Development
+
+1. Put secrets in `development/secrets.yaml`
+2. `docker compose up -d`
