@@ -9,10 +9,12 @@ Provides a sensor with the current number of devices connected to your router.
 ```yaml
 # configuration.yaml
 
+ziggo_modem:
+  default_gateway: 192.168.178.1
+  router_password: examplePassword
+
 sensor:
   - platform: ziggo_modem
-    default_gateway: 192.168.178.1
-    router_password: examplePassword
 ```
 
 ## Development

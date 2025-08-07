@@ -21,7 +21,9 @@ logger:
     homeassistant.components.sensor: debug
     custom_components.ziggo_modem.sensor: debug
 
+ziggo_modem:
+  default_gateway: !secret default_gateway
+  router_password: !secret router_password
+
 sensor:
   - platform: ziggo_modem
-    default_gateway: !secret default_gateway
-    router_password: !secret router_password
