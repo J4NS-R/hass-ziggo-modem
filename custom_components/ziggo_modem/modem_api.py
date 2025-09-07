@@ -17,11 +17,12 @@ class ModemApiSession(requests.Session):
         self.verify = False
 
     def _refresh_token(self):
+        # This method does not use self.post() because that would call self.request() you'd have an infinite loop
         resp = requests.post(self._login_url, json={'password': self._router_password}, headers={
             'Accept': 'application/json',
             'Content-Type': 'application/json',
             'User-Agent': 'HomeAssistant/ziggo_modem',
-        })
+        }, verify=self.verify)
         resp.raise_for_status()
         new_token = resp.json()['created']['token']
         self.headers.update({'Authorization': f'Bearer {new_token}'})
