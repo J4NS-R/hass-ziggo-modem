@@ -3,3 +3,4 @@
 requests~=2.32.4
 homeassistant~=2025.7.4
 voluptuous~=0.15.2
+pytest~=8.4.2
